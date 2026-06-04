@@ -1,16 +1,16 @@
 # Esports Hub Dashboard
 
-Лендінг-проєкт для демонстрації простого дашборду геймерського профілю з адаптивною версткою, темною/світлою темою та динамічними елементами.
+A landing page project showcasing a simple gaming profile dashboard with responsive layout, dark/light theme switching, and interactive fields.
 
-## Опис
+## Overview
 
-Цей проєкт містить три основні сторінки:
+This project includes three main pages:
 
-- `index.html` — профіль гравця з аватаром і статусом.
-- `stats.html` — статистика, яку можна скинути.
-- `settings.html` — перемикач темної/світлої теми.
+- `index.html` — player profile with avatar and status input.
+- `stats.html` — player statistics form with save and reset behavior.
+- `settings.html` — theme settings page for switching between dark and light modes.
 
-## Структура
+## Project structure
 
 ```
 index.html
@@ -30,21 +30,21 @@ js/
     theme.js
 ```
 
-## Технології
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript (ES modules)
 
-## Як запустити
+## How to use
 
-1. Відкрий `index.html`, `stats.html` або `settings.html` у браузері.
-2. Натисни кнопку `Edit Status` на сторінці профілю, щоб змінити статус.
-3. На сторінці `Statistics` натисни кнопку `Reset Stats`, щоб очистити показники.
-4. На сторінці `Settings` перемикай тему між темною і світлою.
+1. Open `index.html`, `stats.html`, or `settings.html` in a browser.
+2. Use the status form on the profile page to update your status.
+3. Use the statistics page to save or reset your performance values.
+4. Use the settings page to toggle between dark and light themes.
 
-## Додатково
+## Notes
 
-- Тема зберігається у `localStorage`.
-- Стилі розбиті на базовий файл `main.css` і компонентні стилі `components.css`.
-- Сторінки мають адаптивну верстку та читабельний інтерфейс.
+- Theme choice is persisted in `localStorage`.
+- Styles are split between the base stylesheet `main.css` and component styles in `components.css`.
+- Pages are designed to be responsive and centered for a clean user experience.
