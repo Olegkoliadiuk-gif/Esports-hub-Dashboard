@@ -1,45 +1,50 @@
 # Esports Hub Dashboard
 
-A multi-page, client-side web application designed to act as an esports player hub. The platform features an integrated state-management sync engine across distinct functional modules: profile overview, live match statistics, and client settings dashboards.
+Лендінг-проєкт для демонстрації простого дашборду геймерського профілю з адаптивною версткою, темною/світлою темою та динамічними елементами.
 
-## Product Specification
+## Опис
 
-### Architecture & Global State Sync
-- **Layout Model:** Responsive semantic layout architecture containing top navigational networks, centralized feature cards, and clean bottom metadata footers.
-- **Dynamic Variable Systems:** Implements global CSS custom property declarations (`:root`) to change application typography and skin maps instantly across views.
-- **Cross-Page State Engine:** Utilizes the synchronous Web Storage API (`localStorage`) to cache user preferences (`theme`) and execute immediate DOM mutations during initialization, preventing interface flash across page navigations.
-- **Responsive Breakpoints:** Media queries adapt layouts below `600px` viewports, stacking wide navigation blocks vertically for optimal mobile display matrix scaling.
+Цей проєкт містить три основні сторінки:
 
-### Core Modules
+- `index.html` — профіль гравця з аватаром і статусом.
+- `stats.html` — статистика, яку можна скинути.
+- `settings.html` — перемикач темної/світлої теми.
 
-#### 1. Profile Identity Manager (`index.html` / `Profile.js`)
-- Displays customized user-identity graphics via rounded image avatars fitted with bounding container calculations (`object-fit: cover`).
-- Hosts an active profile status module mapped with explicit string validation boundaries (`Online`, `Do Not Disturb`, `Away`, `Offline`).
-- Employs filter algorithms to discard empty input streams, displaying targeted validation error flags upon broken form payloads.
+## Структура
 
-#### 2. Client Preference Control (`settings.html` / `settings.js`)
-- Controls application-wide visual rendering variables using a lightweight class mutation toggle (`.light-theme`).
-- Rewrites contextual UI text fields dynamically based on the current state.
-- Controls data serialization workflows to store state parameters permanently in the client's device cache.
+```
+index.html
+stats.html
+settings.html
+assets/
+  css/
+    main.css
+    components.css
+  images/
+    Cat-for-html.jpeg
+js/
+  main.js
+  modules/
+    stats.js
+    status.js
+    theme.js
+```
 
-#### 3. Match Analytics Workspace (`stats.html` / `stats.js`)
-- Displays tracking parameters for historical gaming statistics, including Winrate performance, match counts, and structural game roles.
-- Integrates custom decorative progress nodes styled natively with standard web colors.
+## Технології
 
-### Interactive Transitions
-- **Hover Micro-interactions:** Multi-stage scale amplification up to `1.10x` paired with smooth box-shadow outer glow properties (`#ff4e00`) expanding fluidly along a `0.3s` ease curve.
-- **Button Animations:** Implements immediate visual feedback properties that compress targets (`0.98x`) natively during physical tap interactions (`:active`).
+- HTML5
+- CSS3
+- JavaScript (ES modules)
 
-## Deployment
+## Як запустити
 
-### Prerequisites
-A modern standard web runtime platform configured to execute local storage configurations, spatial transforms, and DOM interface mutations smoothly.
+1. Відкрий `index.html`, `stats.html` або `settings.html` у браузері.
+2. Натисни кнопку `Edit Status` на сторінці профілю, щоб змінити статус.
+3. На сторінці `Statistics` натисни кнопку `Reset Stats`, щоб очистити показники.
+4. На сторінці `Settings` перемикай тему між темною і світлою.
 
-### File Architecture
-- `index.html` (Primary Profile DOM Core)
-- `stats.html` (Statistics Component DOM Structure)
-- `settings.html` (Application Preferences DOM Canvas)
-- `Profile.css` (Universal Unified App-Wide Stylesheet)
-- `Profile.js` (Identity Logic Engine)
-- `stats.js` (Metrics Logic Handler)
-- `settings.js` (Theme State Mutator)
+## Додатково
+
+- Тема зберігається у `localStorage`.
+- Стилі розбиті на базовий файл `main.css` і компонентні стилі `components.css`.
+- Сторінки мають адаптивну верстку та читабельний інтерфейс.

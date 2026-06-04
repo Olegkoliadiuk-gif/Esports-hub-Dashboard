@@ -1,0 +1,123 @@
+:root {
+  --bg: #0f1220;
+  --surface: #161b34;
+  --surface-strong: #1d2346;
+  --text: #f5f8ff;
+  --muted: #9aa5c8;
+  --accent: #7c5cff;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(124, 92, 255, 0.16), transparent 28%),
+    linear-gradient(180deg, #0b0e1a 0%, #0f1220 100%);
+  color: var(--text);
+}
+
+.light-theme {
+  --bg: #f7f8ff;
+  --surface: #ffffff;
+  --surface-strong: #f1f3ff;
+  --text: #111827;
+  --muted: #5f6d8e;
+  --accent: #5b53ff;
+  --shadow: 0 18px 40px rgba(17, 24, 39, 0.12);
+  --border: rgba(15, 23, 42, 0.08);
+  background:
+    radial-gradient(circle at top, rgba(91, 83, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eff2ff 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.content {
+  width: min(100%, 760px);
+}
+
+.page-panel {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: calc(100vh - 220px);
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.content {
+  flex: 1;
+}
+
+.page-panel {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 220px);
+}
+
+footer {
+  text-align: center;
+  padding: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 680px) {
+  .page-shell {
+    padding: 18px;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .page-panel {
+    min-height: auto;
+  }
+}

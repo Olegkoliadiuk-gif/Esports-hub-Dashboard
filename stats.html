@@ -1,37 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Profile.css">
-    <script src="stats.js" defer></script>
-    <title>Gamer Statistics</title>
-</head>
-<body>
-    
-    <header>
-        <h1>ESPORTS DASHBOARD</h1>
-    </header>
-
-    <nav>
-        <a href="index.html" id="Profile">Profile</a>
-        <a href="stats.html" id="Stats">Statistics</a>
-        <a href="settings.html" id="Settings">Settings</a>
-    </nav>
-
-    <section>
-        <div class="card">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <script src="js/main.js" type="module" defer></script>
+    <title>Statistics | Esports Dashboard</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header><h1>ESPORTS DASHBOARD</h1></header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Profile</a>
+        <a href="stats.html" class="nav-link">Statistics</a>
+        <a href="settings.html" class="nav-link">Settings</a>
+      </nav>
+      <main class="content">
+        <section class="page-panel">
+          <div class="card">
             <h2>STATISTICS</h2>
-            <div class="avatar" style="background-color: #ff4e00; border-radius: 8px; height: 10px; width: 100%; margin: 20px 0;"></div>
-            <p class="status">Winrate: <span id="stat-winrate">56%</span></p>
-            <p class="status">Matches: <span id="stat-matches">1,200+</span></p>
-            <p class="status">Main Role: <span id="stat-role">Mid</span></p>
-            <button id="reset_stats_btn">Reset Stats</button>
-        </div>
-    </section>
+            <form id="stats-form" class="form-stack">
+              <label for="winrate-input">Winrate</label>
+              <input
+                id="winrate-input"
+                type="text"
+                placeholder="e.g. 56%"
+                required
+              />
 
-    <footer>
-        <p>Created by @OlehKoliadiuk.</p>
-    </footer>
+              <label for="matches-input">Matches</label>
+              <input
+                id="matches-input"
+                type="text"
+                placeholder="e.g. 1200+"
+                required
+              />
 
-</body>
+              <label for="role-input">Main role</label>
+              <input
+                id="role-input"
+                type="text"
+                placeholder="e.g. Mid"
+                required
+              />
+
+              <div class="button-row">
+                <button type="submit" class="btn primary">Save Stats</button>
+                <button
+                  id="reset_stats_btn"
+                  type="button"
+                  class="btn secondary"
+                >
+                  Reset Fields
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer><p>Created by @OlehKoliadiuk.</p></footer>
+    </div>
+  </body>
 </html>

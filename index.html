@@ -1,37 +1,49 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="Profile.css">
-        <script src="Profile.js" defer></script>
-        <title>Gamer Profile</title>
-    </head>
-    <body>
-        
-        <header>
-            <h1>ESPORTS DASHBOARD</h1>
-        </header>
-
-        <nav>
-            <a href="index.html" id="Profile">Profile</a>
-            <a href="stats.html" id="Stats">Statistics</a>
-            <a href="settings.html" id="Settings">Settings</a>
-        </nav>
-
-        <section>
-            <div class="card">
-                <div class="avatar">
-                    <img src="Cat-for-html.jpeg" alt="Avatar" class="Profile-Avatar">
-                </div>
-                <h2>nvrmnd</h2>
-                <p class="status">Status: Unknown</p>
-                <button id="change_status_btn">Edit Status</button>
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <script src="js/main.js" type="module" defer></script>
+    <title>Profile | Esports Dashboard</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header><h1>ESPORTS DASHBOARD</h1></header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Profile</a>
+        <a href="stats.html" class="nav-link">Statistics</a>
+        <a href="settings.html" class="nav-link">Settings</a>
+      </nav>
+      <main class="content">
+        <section class="page-panel">
+          <div class="card profile-card">
+            <div class="avatar">
+              <img src="assets/images/Cat-for-html.jpeg" alt="Avatar" />
             </div>
+            <h2>nvrmnd</h2>
+            <p class="status">Status: Unknown</p>
+            <form id="status-form" class="form-stack">
+              <label for="status-input">Change status</label>
+              <input
+                id="status-input"
+                list="status-options"
+                placeholder="Select or type status"
+                required
+              />
+              <datalist id="status-options">
+                <option value="Online"></option>
+                <option value="Do Not Disturb"></option>
+                <option value="Away"></option>
+                <option value="Offline"></option>
+              </datalist>
+              <button type="submit" class="btn primary">Save Status</button>
+            </form>
+          </div>
         </section>
-
-        <footer>
-            <p>Created by @OlehKoliadiuk.</p>
-        </footer>
-
-    </body>
+      </main>
+      <footer><p>Created by @OlehKoliadiuk.</p></footer>
+    </div>
+  </body>
 </html>

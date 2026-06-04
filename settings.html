@@ -1,35 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Profile.css">
-    <script src="settings.js" defer></script>
-    <title>Gamer Settings</title>
-</head>
-<body>
-    
-    <header>
-        <h1>ESPORTS DASHBOARD</h1>
-    </header>
-
-    <nav>
-        <a href="index.html" id="Profile">Profile</a>
-        <a href="stats.html" id="Stats">Statistics</a>
-        <a href="settings.html" id="Settings">Settings</a>
-    </nav>
-
-    <section>
-        <div class="card">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <script src="js/main.js" type="module" defer></script>
+    <title>Settings | Esports Dashboard</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header><h1>ESPORTS DASHBOARD</h1></header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Profile</a>
+        <a href="stats.html" class="nav-link">Statistics</a>
+        <a href="settings.html" class="nav-link">Settings</a>
+      </nav>
+      <main class="content">
+        <section class="page-panel">
+          <div class="card">
             <h2>SETTINGS</h2>
-            <p class="status" id="theme-text" style="margin-top: 20px;">Theme: Dark</p>
-            <p class="status">Privacy: Incognito</p>
-            <button id="toggle_theme_btn">Toggle Light Theme</button>
-        </div>
-    </section>
-
-    <footer>
-        <p>Created by @OlehKoliadiuk.</p>
-    </footer>
-
-</body>
+            <p id="theme-text" style="margin-top: 20px">Theme: Dark</p>
+            <button id="toggle_theme_btn" class="btn primary">
+              Toggle Light Theme
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer><p>Created by @OlehKoliadiuk.</p></footer>
+    </div>
+  </body>
 </html>
